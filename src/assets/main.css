@@ -1,0 +1,88 @@
+/*
+Colours
+
+dark-blue: #204f54
+light-blue: #43969d
+
+light-orange: #da6937
+dark-orange: #95482c
+
+dark-grey: #313131
+**/
+
+@import './reset.css';
+
+* {
+  box-sizing: border-box
+}
+
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  color: #204f54;
+  background: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+}
+
+p {
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 600;
+}
+
+.modem-site-container {
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 100%;
+}
+
+@media (min-width: 786px) {
+  .modem-site-container {
+    max-width: 800px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .modem-site-container {
+    max-width: 1024px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .modem-site-container {
+    max-width: 1200px;
+  }
+}
+
+
+
