@@ -25,8 +25,8 @@
       </div>
     </form>
     <section class="page__button-group">
-      <button type="submit">Update Settings</button>
-      <button>Logout</button>
+      <GenericButton text="Update Settings" type="submit" />
+      <GenericButton text="Logout" />
     </section>
   </main>
 </template>
@@ -50,75 +50,6 @@
   }
 </script>
 
-<style scoped>
-  .page__heading {
-    font-size: 25px;
-    text-align: center;
-    margin: 30px 0;
-    text-transform: uppercase;
-  }
-  .page__subheading {
-    margin-bottom: 20px;
-  }
-
-  .page__description {
-    margin-bottom: 40px;
-  }
-
-  .page__button-group {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .page__button-group button {
-    background-color: #da6937;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 20px;
-    cursor: pointer;
-    min-width: 200px;
-    margin-bottom: 20px;
-  }
-
-  .account-page__label {
-    margin-bottom: 5px;
-    display: block;
-    font-size: 18px;
-    margin-left: 10px;
-
-  }
-  .account-page__input {
-    width: 100%;
-    border: 1px #bebdbd solid;
-    margin-bottom: 20px;
-    border-radius: 20px;
-    min-height: 50px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    .page__heading {
-      font-size: 45px;
-      margin: 60px 0 30px;
-    }
-
-    .page__subheading {
-      margin-bottom: 40px;
-      margin-left: 10px;
-    }
-
-    .account-page__input {
-      margin-bottom: 40px;
-    }
-
-    .page__button-group {
-      display: flex;
-      flex-direction: row;
-      justify-content: space-between;
-    }
-  }
-</style>
+<script setup>
+  import GenericButton from '../components/generic/GenericButton.vue';
+</script>

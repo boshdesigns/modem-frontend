@@ -9,8 +9,3 @@
     <FeaturedProducts />
   </main>
 </template>
-
-
-<style>
- 
-</style>

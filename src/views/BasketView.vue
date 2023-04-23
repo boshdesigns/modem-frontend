@@ -18,37 +18,3 @@
     <OrderTable />
   </main>
 </template>
-
-<style scoped>
-  .page__heading {
-    font-size: 25px;
-    text-align: center;
-    margin: 30px 0;
-    text-transform: uppercase;
-  }
-
-  .page__subheading {
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .page__description {
-    margin-bottom: 40px;
-  }
-
-  .page__description p {
-    font-size: 14px; 
-  }
-
-  @media only screen and (min-width: 768px) {
-    .page__heading {
-      font-size: 45px;
-      margin: 60px 0 30px;
-    }
-
-    .page__subheading {
-      font-size: 30px;
-    }
-
-  }
-</style>

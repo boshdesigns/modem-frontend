@@ -1,4 +1,8 @@
 <script setup>
+  // import components
+  import GenericButton from '../components/generic/GenericButton.vue';
+  
+  
   import { ref } from 'vue';
   const count = ref(0);
 </script>
@@ -61,7 +65,7 @@
                 <div class="product-page__counter__up-arrow" @click="count++">></div>
                 <div class="product-page__counter__down-arrow" @click="$event => {count > 0 ? count-- : 0}">></div>
               </div>
-              <button class="product-page__cart-button">Add to Cart</button>
+              <GenericButton class="product-page__cart-button" text="Add to Cart" />
             </div>
           </div>
         </div>
@@ -80,172 +84,3 @@
     </section>
   </main>
 </template>
-
-
-<style scoped>
-  .product-page__body {
-    display: flex;
-    flex-direction: column;
-    padding: 30px 0;
-  }
-  .product-page__left-col,
-  .product-page__right-col {
-    width: 100%;
-    padding: 0 30px;
-  }
-
-  .product-page__description {
-    margin-bottom: 40px;
-  }
-  .product-page__description__header,
-  .product-page__description__price {
-    font-weight: 600;
-    font-size: 30px;
-    margin-bottom: 30px;
-  }
-
-  .product-page__disclaimer {
-    max-width: 90%;
-    margin: 40px auto;
-  }
-  .product-page__disclaimer__header {
-    border: 1px solid #7e7e7e;
-    text-align: center;
-    padding: 15px;
-    font-size: 20px;
-    margin-bottom: 20px;
-  }
-
-  .product-page__product-details {
-    margin-bottom: 40px;
-  }
-  .product-page__product-details li {
-    font-size: 18px;
-    margin-bottom: 15px;
-  }
-  .product-page__product-details strong {
-    font-weight: bold;
-    color: #da6937;
-    margin-right: 15px;
-  }
-
-  .product-page__purchase-group {
-    display: flex;
-    align-items: center;
-  }
-
-  .product-page__cart-button {
-    background-color: #da6937;
-    color: #fff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    font-weight: 600;
-    font-size: 20px;
-    cursor: pointer;
-    min-width: 200px;
-    margin-left: 40px;
-  }
-
-
-  /* Number counter styling */
-  
-  .product-page__counter  {
-    position: relative;
-    height: 40px;
-    width: 60px;
-  }
-  .product-page__counter input {
-    font-size: 20px;
-    padding: 10px;
-    width: 100%;
-    height: 100%;
-    border: 1px solid #e5e5e5;
-  }
-
-  .product-page__counter input::-webkit-outer-spin-button,
-  .product-page__counter input::-webkit-inner-spin-button {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    margin: 0;
-  }
-
-  .product-page__counter__up-arrow,
-  .product-page__counter__down-arrow {
-    position: absolute;
-    background-color: #da6937;
-    top: 3px;
-    right: 3px;
-    height: 40%;
-    width: 15px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    transform: rotate(-90deg);
-    cursor: pointer;
-
-    /* prevent highlighting of the arrow characters */
-    -webkit-touch-callout: none; /* iOS Safari */
-      -webkit-user-select: none; /* Safari */
-       -khtml-user-select: none; /* Konqueror HTML */
-         -moz-user-select: none; /* Old versions of Firefox */
-          -ms-user-select: none; /* Internet Explorer/Edge */
-              user-select: none; /* Non-prefixed version, currently supported by Chrome, Opera and Firefox */
-  }
-
-  .product-page__counter__down-arrow {
-    bottom: 3px;
-    top: auto;
-    transform: rotate(90deg);
-  }
-
-  /* availablity styling */
-  .product-page__availablity {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 600;
-  }
-
-  .product-page__availablity--in-stock {
-    color: #00B100;
-  }
-  .product-page__availablity--low-stock {
-    color: #da6937;
-  }
-  .product-page__availablity--out-of-stock {
-    color: #e01e1e;
-  }
-
-  /* PLACEHOLDER STYLING FOR THE GALLERY */
-  .product-page__gallery div {
-    width: 100%;
-    height: 400px;
-    background-color: #313131;
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 40px;
-  }
-
-  @media only screen and (min-width: 768px) {
-    .product-page__body {
-      flex-direction: row;
-      padding: 80px 0 30px;
-    }
-    .product-page__disclaimer__header {
-      margin-bottom: 40px;
-    }
-    .product-page__left-col {
-      width: 40%;
-    }
-    .product-page__right-col {
-      width: 60%;
-    }
-  }
-
-  
-
-</style>
