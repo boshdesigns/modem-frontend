@@ -1,148 +1,7 @@
-@import './reset.css';
-@import './pages.css';
-
-* {
-  box-sizing: border-box
-}
-
-/** ROOT COLOUR VARS **/
-:root {
-  --dark-blue: #204f54;
-  --light-blue: #43969d;
-  --light-orange: #da6937;
-  --dark-orange: #95482c;
-  --dark-grey: #313131;
-}
-
-
-/** DEFAULT SITE STYLING **/
-body {
-  margin: 0;
-  min-height: 100vh;
-  color: var(--dark-blue);
-  background: #fff;
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-p {
-  margin-bottom: 20px;
-  line-height: 1.2;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-h1,
-h2,
-h3,
-h4 {
-  font-weight: 600;
-}
-
-
-/** SITE GRID SYSTEM **/ 
-.modem-site-container {
-  margin-right: auto;
-  margin-left: auto;
-  padding-left: 15px;
-  padding-right: 15px;
-  width: 100%;
-}
-
-@media (min-width: 786px) {
-  .modem-site-container {
-    max-width: 800px;
-  }
-}
-
-@media (min-width: 1024px) {
-  .modem-site-container {
-    max-width: 1024px;
-  }
-}
-
-@media (min-width: 1400px) {
-  .modem-site-container {
-    max-width: 1200px;
-  }
-}
-
-
-/** GENERIC STYLING **/
-/** BUTTONS **/
-.button--generic {
-  background-color: var(--light-orange);
-  color: #fff;
-  padding: 8px 15px;
-  border: none;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 13px;
-  cursor: pointer;
-}
-
-/** GENERIC PAGE STYLING **/
-.page__heading {
-  font-size: 25px;
-  text-align: center;
-  margin: 30px 0;
-  text-transform: uppercase;
-}
-.page__subheading {
-  margin-bottom: 20px;
-}
-
-.page__description {
-  margin-bottom: 40px;
-}
-
-.page__description p {
-  font-size: 14px; 
-}
-
-.page__button-group {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-@media only screen and (min-width: 768px) {
-  .page__heading {
-    font-size: 45px;
-    margin: 60px 0 30px;
-  }
-
-  .page__subheading {
-    margin-bottom: 40px;
-    margin-left: 10px;
-  }
-
-  .page__button-group {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-}
+@import './css-includes/reset.css';
+@import './css-includes/base.css';
+@import './css-includes/pages.css';
+@import './css-includes/icons.css';
 
 /** DROPDOWN **/
 .custom-dropdown {
@@ -402,6 +261,10 @@ footer {
   display: flex;
   justify-content: center;
   margin: 5px 0;
+}
+
+.product-card__cart-button button {
+  font-size: 13px;
 }
 
 

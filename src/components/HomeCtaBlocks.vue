@@ -5,5 +5,5 @@
 </template>
 
 <script setup>
-  import HomeCtaCard from './cards/HomeCtaCard.vue';
+  import HomeCtaCard from '@/components/cards/HomeCtaCard.vue';
 </script>

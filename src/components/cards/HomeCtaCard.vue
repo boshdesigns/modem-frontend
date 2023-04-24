@@ -33,5 +33,5 @@
 </script>
 
 <script setup>
-    import GenericPicture from '../generic/GenericPicture.vue';
+    import GenericPicture from '@/components/generic/GenericPicture.vue';
 </script>

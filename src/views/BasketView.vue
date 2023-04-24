@@ -1,9 +1,8 @@
 <script setup>
-  import OrderTable from '../components/OrderTable.vue';
+  import OrderTable from '@/components/OrderTable.vue';
 </script>
 
 <template>
-  <main class="modem-site-container">
     <h1 class="page__heading">Shopping Cart</h1>
     <h2 class="page__subheading">Manage your orders</h2>
     <div class="page__description">
@@ -16,5 +15,4 @@
       <p>Transport ticket travel day and time options will be available closer to the event date. You will receive an email when this becomes available.</p> 
     </div>
     <OrderTable />
-  </main>
 </template>

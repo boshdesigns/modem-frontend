@@ -1,14 +1,12 @@
 <script setup>
   // import components
-  import GenericButton from '../components/generic/GenericButton.vue';
-  
+  import GenericButton from '@/components/generic/GenericButton.vue';
   
   import { ref } from 'vue';
   const count = ref(0);
 </script>
 
 <template>
-  <main class="modem-site-container">
     <section class="product-page">
       <div class="product-page__body">
         <div class="product-page__left-col">
@@ -82,5 +80,4 @@
         <p>Entrance to Mo:Dem Festival is only possible at the minimum age of 18 years. People under 18 years of age may only enter the festival accompanied by their parents.</p>
       </aside>
     </section>
-  </main>
 </template>

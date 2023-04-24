@@ -6,15 +6,3 @@
         </g>
     </svg>
 </template>
-
-<style scoped>
-    .account-icon {
-        height: 100%;
-    }
-    .account-icon .cls-1 {
-        fill: none; 
-        stroke: #fff; 
-        stroke-miterlimit: 10; 
-        stroke-width: 1.6px
-    }
-</style>

@@ -1,19 +1,33 @@
-<script setup>
-  import SiteProductGrid from '../components/SiteProductGrid.vue';
-</script>
-
 <template>
- <main class="modem-site-container">
-    <h1 class="page__heading">Shop</h1>
-    <div class="shop-page__custom-dropdown">
-      <div class="custom-dropdownn">
-        <select>
-          <option value="0">Catgories</option>
-          <option value="1">Catgories 1</option>
-          <option value="2">Catgories 2</option>
-        </select>
-      </div>
-    </div>
-    <SiteProductGrid />
-  </main>
+  <h1 class="page__heading">Shop</h1>
+  <div class="shop-page__custom-dropdown">
+    <GenericDropdown :options="options" @selected="onSelected" />
+  </div>
+  <SiteProductGrid />
 </template>
+
+<script>
+  import SiteProductGrid from '@/components/SiteProductGrid.vue';
+  import GenericDropdown from "@/components/generic/GenericDropdown.vue";
+
+  export default {
+    components: {
+      GenericDropdown,
+      SiteProductGrid
+    },
+    data() {
+      return {
+        options: [
+          { value: "option1", label: "Option 1" },
+          { value: "option2", label: "Option 2" },
+          { value: "option3", label: "Option 3" },
+        ],
+      };
+    },
+    methods: {
+      onSelected(value) {
+        console.log(`Selected: ${value}`);
+      },
+    },
+  };
+</script>

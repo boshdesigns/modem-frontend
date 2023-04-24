@@ -1,5 +1,4 @@
 <template>
-  <main class="modem-site-container">
     <h1 class="page__heading">Refunds</h1>
     <div class="page__description">
       <p>Completed refund request forms and refund cancellations for 2023 tickets must be received by 23:59 CEST on 31st May 2023. No late refund requests will be accepted.</p>
@@ -12,8 +11,11 @@
       <p>Note that all ticket refunds are subject to a fee of 25 € due to administrative costs, as specified in our Terms and Conditions.</p>
     </div>
     <section class="page__button-group">
-      <button>New refund request</button>
-      <button>Back to orders</button>
+      <GenericButton text="New refund request" />
+      <GenericButton text="Back to orders" />
     </section>
-  </main>
 </template>
+
+<script setup>
+  import GenericButton from '@/components/generic/GenericButton.vue';
+</script>

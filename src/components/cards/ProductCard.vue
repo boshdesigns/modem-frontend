@@ -47,6 +47,6 @@
 </script>
 
 <script setup>
-    import GenericButton from '../generic/GenericButton.vue';  
-    import GenericPicture from '../generic/GenericPicture.vue';
+    import GenericButton from '@/components/generic/GenericButton.vue';  
+    import GenericPicture from '@/components/generic/GenericPicture.vue';
 </script>

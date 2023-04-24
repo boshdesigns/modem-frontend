@@ -1,5 +1,5 @@
 <script setup>
-  import SiteProductGrid from './SiteProductGrid.vue'
+  import SiteProductGrid from '@/components/SiteProductGrid.vue'
 </script>
 
 <template>

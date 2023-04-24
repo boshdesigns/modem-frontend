@@ -1,5 +1,5 @@
 <template>
-     <button className="button--generic portal-primary-button">{{ text }}</button>
+     <button class="button--generic portal-primary-button">{{ text }}</button>
 </template>
 
 <script>
