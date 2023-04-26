@@ -6,7 +6,7 @@
 
 <template>
   <Header />
-  <main class="modem-site-container">
+  <main class="base-content-container">
     <RouterView />
   </main>
   <Footer />

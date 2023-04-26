@@ -1,23 +1,21 @@
 <template>
     <div>
-      <label :for="name">{{ label }}</label>
+      <label class="generic-form__label" :for="name">{{ label }}</label>
       <textarea
         class="generic-form__textarea"
         :class="{ [classNames]: classNames }"
         :name="name"
         :id="name"
         :placeholder="placeholder"
-        :value="value"
         :required="required"
         :disabled="disabled"
-        @input="input"
+        @input="(event) => $emit('update:modelValue', event.target.value)"
       ></textarea>
     </div>
   </template>
   
   <script>
   export default {
-    name: 'FormTextarea',
     props: {
       label: {
         type: String,
@@ -31,10 +29,6 @@
         type: String,
         default: '',
       },
-      value: {
-        type: String,
-        default: '',
-      },
       required: {
         type: Boolean,
         default: false,
@@ -43,12 +37,9 @@
         type: Boolean,
         default: false,
       },
-      methods: {
-         input(event) {
-            const value = event.target.value;
-              const name = event.target.name;
-            this.$emit('input', {name, value})
-        },
+      classNames: {
+        type: String,
+        default: ''
       },
     },
   };

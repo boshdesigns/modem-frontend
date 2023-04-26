@@ -4,6 +4,6 @@
 
 <template>
    <section class="product-card__grid">
-      <ProductCard />
+      <ProductCard v-for="(index) in [1, 2, 3]" :key="index" />
     </section>
 </template>

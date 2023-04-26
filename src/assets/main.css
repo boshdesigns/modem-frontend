@@ -4,12 +4,12 @@
 @import './css-includes/icons.css';
 
 /** DROPDOWN **/
-.custom-dropdown {
+.custom-dropdown__container {
   position: relative;
   width: 100%;
   max-width: 240px;
 }
-.custom-dropdown select {
+.custom-dropdown__container select {
   width: 100%;
   padding: 5px 35px 5px 5px;
   font-size: 16px;
@@ -24,7 +24,7 @@
   z-index: 1;
 }
 
-.custom-dropdown::after {
+.custom-dropdown__container::after {
   content: "";
   height: 13px;
   width: 13px;
@@ -32,11 +32,10 @@
   border-bottom: 1px #000 solid;
   position: absolute;
   right: 10px;
-  top: 38%;
+  top: 33%;
   transform: translateY(-50%) rotate(45deg);
   z-index: 100;
 }
-
 
 
 /** HEADER STYLING **/
@@ -45,7 +44,7 @@ header {
   background-color: var(--dark-grey);
 }
 
-header .modem-site-container {
+header .base-content-container {
   padding: 30px 0 10px;
 }
 
@@ -58,7 +57,6 @@ header .modem-site-container {
 .site-banner {
   width: 100%;
 }
-
 
 /** FOOTER STYLING **/
 footer {
@@ -431,3 +429,40 @@ footer {
     margin: 60px 0 10px;
   }
 }
+
+/** 3x GRID SYSTEM **/
+/* .site-x3-grid__grid {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.site-x3-grid__item {
+  width: 100%;
+  margin: 30px 0;
+  position: relative;
+}
+
+@media only screen and (min-width: 500px) {
+  .site-x3-grid__item {
+    width: calc(50% - 30px * 2);
+    margin: 30px;
+  }
+  .site-x3-grid__grid {
+    flex-direction: row;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  .site-x3-grid__grid {
+    flex-direction: row;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+  .site-x3-grid__item {
+    width: calc(33.3% - 30px * 2);
+    margin: 30px;
+  }
+} */

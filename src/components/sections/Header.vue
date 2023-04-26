@@ -4,7 +4,7 @@
 
 <template>
   <header>
-    <div class="modem-site-container">
+    <div class="base-content-container">
       <div class="logo-container">
         <a href="/">
           <img alt="Modem logo" class="logo-image" src="@/assets/logo.png" width="268" height="49" />

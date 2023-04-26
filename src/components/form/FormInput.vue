@@ -8,17 +8,15 @@
         :name="name"
         :id="name"
         :placeholder="placeholder"
-        :value="value"
         :required="required"
         :disabled="disabled"
-        @input="input"
+        @input="(event) => $emit('update:modelValue', event.target.value)"
       />
     </div>
   </template>
   
   <script>
   export default {
-    name: 'FormInput',
     props: {
       label: {
         type: String,
@@ -36,10 +34,6 @@
         type: String,
         default: '',
       },
-      value: {
-        type: [String, Number],
-        default: '',
-      },
       required: {
         type: Boolean,
         default: false,
@@ -53,13 +47,6 @@
         default: ''
       }
     },
-    methods: {
-            input(event) {
-                const value = event.target.value;
-                const name = event.target.name;
-                this.$emit('input', {name, value})
-            },
-        },
   };
   </script>
   

@@ -1,5 +1,5 @@
 <script setup>
-  import OrderTable from '@/components/OrderTable.vue';
+  import OrderTable from '@/components/sections/OrderTable.vue';
 </script>
 
 <template>
@@ -14,5 +14,8 @@
       <p>If you have purchased a ticket for someone else, you can re-assign the ticket to their account and allow them to manage their own ticket.</p>
       <p>Transport ticket travel day and time options will be available closer to the event date. You will receive an email when this becomes available.</p> 
     </div>
-    <OrderTable />
+    <OrderTable :orderData="[
+          {order_id: 1001, date: '2023-04-21', via: 'Web', status: 'Shipped', items: 2 },
+          {order_id: 1001, date: '2023-04-21', via: 'Web', status: 'Test', items: 2 },
+        ]"/>
 </template>

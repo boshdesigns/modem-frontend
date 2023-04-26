@@ -1,6 +1,6 @@
 <template>
   <footer>
-    <div class="modem-site-container">
+    <div class="base-content-container">
       <section class="footer__container">
         <div class="footer__row footer__links">
           <FooterNavigation :links="links" heading="Useful Links" />

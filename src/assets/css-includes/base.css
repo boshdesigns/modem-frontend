@@ -55,7 +55,7 @@
   
   
   /** SITE GRID SYSTEM **/ 
-  .modem-site-container {
+  .base-content-container {
     margin-right: auto;
     margin-left: auto;
     padding-left: 15px;
@@ -64,19 +64,19 @@
   }
   
   @media (min-width: 786px) {
-    .modem-site-container {
+    .base-content-container {
       max-width: 800px;
     }
   }
   
   @media (min-width: 1024px) {
-    .modem-site-container {
+    .base-content-container {
       max-width: 1024px;
     }
   }
   
   @media (min-width: 1400px) {
-    .modem-site-container {
+    .base-content-container {
       max-width: 1200px;
     }
   }
@@ -157,10 +157,76 @@
     min-height: 50px;
     padding: 10px 15px;
     font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
   }
 
+  .generic-form__input::placeholder,
+  .generic-form__textarea::placeholder {
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .generic-form__select,
+  .generic-form__radio {
+    min-height: 50px;
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-family: 'Montserrat', sans-serif;
+  }
+
+  .generic-form__radio input[type='radio'] {
+    margin-right: 10px;
+  }
+
+  .generic-form__radio input[type='radio']:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.generic-form__radio input[type='radio']:checked:after {
+    width: 15px;
+    height: 15px;
+    border-radius: 15px;
+    top: -2px;
+    left: -1px;
+    position: relative;
+    background-color: var(--light-orange);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid white;
+}
+
+.generic-form__radio__container {
+  display: flex;
+  flex-direction: column;
+}
+
+.generic-form__radio__option {
+  margin-bottom: 15px;
+}
+
   @media only screen and (min-width: 768px) {
-    .generic-form__input {
+    .generic-form__input,
+    .generic-form__select,
+    .generic-form__radio,
+    .generic-form__textarea {
       margin-bottom: 40px;
+    }
+
+    .generic-form__radio__container {
+      flex-direction: row;
+    }
+
+    .generic-form__radio__option {
+      margin-right: 15px;
     }
   }
