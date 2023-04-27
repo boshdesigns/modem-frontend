@@ -1,14 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="generic-form">
-    <FormInput
-      label="Current Password"
-      type="password"
-      name="currentPassword"
-      v-model="formData.currentPassword"
-      required
-      classNames="more-classes"
-    />
-
+  <form @submit.prevent="handleSubmit" class="generic-form generic-form--register">
     <FormInput
       label="Full Name"
       type="text"
@@ -26,24 +17,22 @@
     />
 
     <FormInput
-      label="New Password"
+      label="Password"
       type="password"
-      name="newPassword"
-      v-model="formData.newPassword"
+      name="password"
+      v-model="formData.password"
       required
     />
 
-    <FormInput
-      label="Confirm Password"
-      type="password"
-      name="confirmPassword"
-      v-model="formData.confirmPassword"
-      required
+    <FormRadio
+      name="radio-options"
+      label="Radio"
+      :options="[{ label: 'option_1', value: 'option 1' }, { label: 'option_2', value: 'option 2' }, { label: 'option_3', value: 'option 3' }]"
+      v-model="formData.radioOption"
     />
 
      <section class="page__button-group">
-        <GenericButton text="Update Settings" type="submit" />
-        <GenericButton text="Logout" />
+        <GenericButton text="Login" type="submit" />
     </section>
   </form>
    
@@ -54,17 +43,15 @@
       data() {
           return {
               formData: {
-                 currentPassword: '',
                   fullName: '',
                   email: '',
-                  newPassword: '',
-                  confirmPassword: '',
+                  password: '',
+                  radioOption: ''
               },
           };
       },
       methods: {
         handleSubmit() {
-          // needs validation
             console.log('Form submitted:', this.formData);
         },
       },
@@ -74,5 +61,6 @@
 <script setup>
   // Import form elements as needed 
   import FormInput from '@/components/form/FormInput.vue';
+  import FormRadio from '@/components/form/FormRadioButtons.vue';
   import GenericButton from '@/components/generic/GenericButton.vue';
 </script>

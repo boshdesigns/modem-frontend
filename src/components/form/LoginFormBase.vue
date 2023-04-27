@@ -1,14 +1,5 @@
 <template>
-  <form @submit.prevent="handleSubmit" class="generic-form">
-    <FormInput
-      label="Current Password"
-      type="password"
-      name="currentPassword"
-      v-model="formData.currentPassword"
-      required
-      classNames="more-classes"
-    />
-
+  <form @submit.prevent="handleSubmit" class="generic-form generic-form--login">
     <FormInput
       label="Full Name"
       type="text"
@@ -26,24 +17,15 @@
     />
 
     <FormInput
-      label="New Password"
+      label="Password"
       type="password"
-      name="newPassword"
-      v-model="formData.newPassword"
-      required
-    />
-
-    <FormInput
-      label="Confirm Password"
-      type="password"
-      name="confirmPassword"
-      v-model="formData.confirmPassword"
+      name="password"
+      v-model="formData.password"
       required
     />
 
      <section class="page__button-group">
-        <GenericButton text="Update Settings" type="submit" />
-        <GenericButton text="Logout" />
+        <GenericButton text="Login" type="submit" />
     </section>
   </form>
    
@@ -54,17 +36,14 @@
       data() {
           return {
               formData: {
-                 currentPassword: '',
                   fullName: '',
                   email: '',
-                  newPassword: '',
-                  confirmPassword: '',
+                  password: '',
               },
           };
       },
       methods: {
         handleSubmit() {
-          // needs validation
             console.log('Form submitted:', this.formData);
         },
       },

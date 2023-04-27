@@ -2,7 +2,7 @@
     <div class="generic-form__radio">
       <label :for="name"  class="generic-form__label">{{ label }}</label>
         <div class="generic-form__radio__container">
-            <div v-for="(option, index) in options" :key="index" class="generic-form__radio__option" :class="{ [classNames]: classNames }">
+            <div v-for="(option, index) in options" :key="index" class="generic-form__radio__option portal-primary-button" :class="{ [classNames]: classNames }">
             <input
                 type="radio"
                 :id="`${name}-${index}`"

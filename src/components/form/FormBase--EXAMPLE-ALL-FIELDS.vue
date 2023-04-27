@@ -1,15 +1,6 @@
 <template>
   <form @submit.prevent="handleSubmit" class="generic-form">
     <FormInput
-      label="Current Password"
-      type="password"
-      name="currentPassword"
-      v-model="formData.currentPassword"
-      required
-      classNames="more-classes"
-    />
-
-    <FormInput
       label="Full Name"
       type="text"
       name="fullName"
@@ -25,19 +16,33 @@
       required
     />
 
-    <FormInput
-      label="New Password"
-      type="password"
-      name="newPassword"
-      v-model="formData.newPassword"
+    <FormDropdownSelect
+      name="categories"
+      label="Categories"
+      :options="[{ label: 'option_select__1', value: 'option select 1' }, { label: 'option_select__2', value: 'option select 2' }, { label: 'option_select__3', value: 'option select 3' }]"
+      v-model="formData.selected"
+    />
+
+    <FormRadio
+      name="radio-options"
+      label="Radio"
+      :options="[{ label: 'option_1', value: 'option 1' }, { label: 'option_2', value: 'option 2' }, { label: 'option_3', value: 'option 3' }]"
+      v-model="formData.radioOption"
+    />
+
+    <FormTextarea
+      label="Message"
+      name="message"
+      placeholder="Enter your message here"
+      v-model="formData.message"
       required
     />
 
     <FormInput
-      label="Confirm Password"
+      label="Password"
       type="password"
-      name="confirmPassword"
-      v-model="formData.confirmPassword"
+      name="password"
+      v-model="formData.password"
       required
     />
 
@@ -57,8 +62,10 @@
                  currentPassword: '',
                   fullName: '',
                   email: '',
-                  newPassword: '',
+                  password: '',
                   confirmPassword: '',
+                  radioOption: '',
+                  selected: ''
               },
           };
       },
@@ -74,5 +81,8 @@
 <script setup>
   // Import form elements as needed 
   import FormInput from '@/components/form/FormInput.vue';
+  import FormTextarea from '@/components/form/FormTextarea.vue';
+  import FormRadio from '@/components/form/FormRadioButtons.vue';
+  import FormDropdownSelect from "@/components/form/FormDropdownSelect.vue";
   import GenericButton from '@/components/generic/GenericButton.vue';
 </script>
