@@ -3,7 +3,7 @@
 }
 .account-icon .cls-1 {
     fill: none; 
-    stroke: #fff; 
+    stroke: var(--portal-background-color); 
     stroke-miterlimit: 10; 
     stroke-width: 1.6px
 }
@@ -13,7 +13,7 @@
 }
 .basket-icon .cls-1{
     fill: none;
-    stroke: #fff;
+    stroke: var(--portal-background-color);
     stroke-miterlimit: 10;
     stroke-width: 2px
 }

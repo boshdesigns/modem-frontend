@@ -1,10 +1,28 @@
 /** ROOT COLOUR VARS **/
+/*
+    Skin colours
+  --portal-background-color
+  --portal-foreground-color
+  --portal-primary-button
+  --portal-secondary-button-color
+*/
 :root {
     --dark-blue: #204f54;
     --light-blue: #43969d;
     --light-orange: #da6937;
     --dark-orange: #95482c;
     --dark-grey: #313131;
+    --color-white: #ffffff;
+    --color-black: #000000;
+
+    --color-green: #00B100;
+    --color-red: #e01e1e;
+
+    --portal-background-color: var(--color-white);
+    --portal-foreground-color: var(--dark-grey);
+
+    --portal-primary-button: var(--light-orange);
+    --portal-secondary-button-color: var(--dark-orange);
   }
 
 * {
@@ -20,8 +38,8 @@
   body {
     margin: 0;
     min-height: 100vh;
-    color: var(--dark-blue);
-    background: #fff;
+    color: var(--portal-foreground-color);
+    background: var(--portal-background-color);
     font-family: 'Montserrat', sans-serif;
     font-weight: 400;
     font-size: 16px;
@@ -37,7 +55,7 @@
   }
   
   a {
-    color: #fff;
+    color: var(--portal-background-color);
     text-decoration: none;
   }
   
@@ -85,8 +103,8 @@
   /** GENERIC STYLING **/
   /** BUTTONS **/
   .button--generic {
-    background-color: var(--light-orange);
-    color: #fff;
+    background-color: var(--portal-primary-button);
+    color: var(--portal-background-color);
     padding: 8px 15px;
     border: none;
     border-radius: 5px;
@@ -188,7 +206,7 @@
     content: '';
     display: inline-block;
     visibility: visible;
-    border: 2px solid white;
+    border: 2px solid var(--portal-background-color);
 }
 
 .generic-form__radio input[type='radio']:checked:after {
@@ -198,11 +216,11 @@
     top: -2px;
     left: -1px;
     position: relative;
-    background-color: var(--light-orange);
+    background-color: var(--portal-primary-button);
     content: '';
     display: inline-block;
     visibility: visible;
-    border: 2px solid white;
+    border: 2px solid var(--portal-background-color);
 }
 
 .generic-form__radio__container {
